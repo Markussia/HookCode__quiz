@@ -22,6 +22,12 @@ body {
     display: flex;
 }
 
+.header .logo p {
+    align-self: center;
+    font-weight: 700;
+    margin: 0 5px;
+}
+
 .header img {
     width: 40px;
     height: 40px;
@@ -121,63 +127,21 @@ body {
     font-weight: 700;
 }
 
-
-/* label{
-    margin: 50px
-}
-
-
-.radio-box{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    padding-left: 20px;
-}
-
-.radio-style{
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border: 1px solid#0ea36e;
-    margin-left: -20px;
-    border-radius: 50%;
-}
-
-.radio-box:checked + .radio-style::before{
-    content: "";
-    width: 8px;
-    height: 8px;
-    background-color: #0ea36e;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border-radius: 50%;
-}
-
-.radio-box:disabled + .radio-style{
-    border-color: #ccc;
-}
-
-.radio-box:checked:disabled + .radio-style{
-    background-color: #ccc;
-} */
-
 .out__time {
     display: none;
-    background-color: #677eff7c;
+    background-color: #d3d9f8;
     padding: 15px;
-    width: 420px;
-    height: 350px;
+    width: 60%;
+    max-width: 400px;
+    min-width: 280px;
+    height: 300px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1001;
     border-radius: 5px;
-    backdrop-filter: blur(8px);
+    border: 1px solid #6980FF;
 }
 
 .out__time__info {
@@ -204,10 +168,54 @@ body {
     cursor: pointer;
 }
 
-.out__time__info h3 {}
-
 label {
     cursor: pointer;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    padding: 15px;
+    background-color: #d3d9f8;
+    width: 100%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 11px;
+}
+
+.categori_quiz {
+    background-color: rgb(123, 142, 247);
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 58%;
+    max-width: 310px;
+    min-width: 250px;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.categori__block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.categori__block a {
+    background-color: #fff;
+    padding: 5px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #677FFF;
+    font-weight: 700;
+    border-radius: 5px;
+    margin: 15px auto;
 }
 
 @media (max-width: 500px) {

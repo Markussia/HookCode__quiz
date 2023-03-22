@@ -4,14 +4,26 @@ let js__radio = document.querySelector('#js');
 let vue__radio = document.querySelector('#vue');
 let outTime = document.querySelector('#outTime')
 var timerInput = document.getElementById("time");
-let timerre = document.querySelector(".base-timer");
+let timerre = document.querySelector(".base-timer__label");
 let btnLocationURL = document.querySelector('#btnLocationURL');
-
-// let all__radio = document.querySelector("input")
-
 let answer__btn = document.querySelector("#answer");
-
 let timerShow = document.getElementById(".time");
+let questBlock = document.querySelector("#questBlock")
+let numberQuest = document.querySelector('#numberQuest');
+let number = 1
+
+const fullDashArray = 283;
+const warning = 10;
+const alert = 5;
+
+const timeLimit = 1800;
+let timePassed = 0;
+let timeLeft = timeLimit;
+let timerInterval = null;
+
+numberQuest.innerHTML = "Вопрос: " +
+    number + " / 10 "
+
 
 function test() {
     if (css__radio.checked === true) {
@@ -21,34 +33,39 @@ function test() {
     }
 }
 
+
+
 answer__btn.addEventListener("click", function() {
+    number = number + 1
+    numberQuest.innerHTML = "Вопрос: " +
+        number + " / 10 "
+    if (number > 10) {
+        answer__btn.style.display = 'none'
+    }
+
     test()
+
+    if (number == 1) {
+
+    }
+
+    if (number == 2) {
+
+    }
+    if (number == 3) {
+        console.log('3')
+    }
+    if (number == 4) {
+        console.log('4')
+    }
+    if (number == 5) {
+        console.log('5')
+    }
+
 })
 
 
-const FULL_DASH_ARRAY = 283;
-const WARNING_THRESHOLD = 10;
-const ALERT_THRESHOLD = 5;
 
-const COLOR_CODES = {
-    info: {
-        color: "green"
-    },
-    warning: {
-        color: "orange",
-        threshold: WARNING_THRESHOLD
-    },
-    alert: {
-        color: "red",
-        threshold: ALERT_THRESHOLD
-    }
-};
-
-const TIME_LIMIT = 5;
-let timePassed = 0;
-let timeLeft = TIME_LIMIT;
-let timerInterval = null;
-let remainingPathColor = COLOR_CODES.info.color;
 
 document.querySelector("#time").innerHTML = `
 <div class="base-timer">
@@ -67,7 +84,7 @@ function onTimesUp() {
 function startTimer() {
     timerInterval = setInterval(() => {
         timePassed = timePassed += 1;
-        timeLeft = TIME_LIMIT - timePassed;
+        timeLeft = timeLimit - timePassed;
         document.getElementById("base-timer-label").innerHTML = formatTime(
             timeLeft
         );
@@ -87,15 +104,15 @@ function formatTime(time) {
 
     }
 
-
-
-    if (seconds == 0) {
+    if (time == 0) {
         outTime.style.display = 'block'
+        questBlock.style.display = 'none'
     }
 
     return `${minutes}:${seconds}`;
 }
 
 btnLocationURL.addEventListener('click', function() {
-    window.location = 'google.com'
+    window.location = 'result.html'
+
 })

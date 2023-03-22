@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HookCode</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <div class="out__time" id="outTime">
+        <div class="out__time__info">
+            <h3>
+                Ваше время закончилось
+            </h3>
+            <button id="btnLocationURL">
+                Узнать результат
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="header">
+            <div class="logo">
+                <img src="images/logotype.png" alt="">
+            </div>
+            <div class="number__quest" id="numberQuest">
+
+            </div>
+            <div class="time" id="time">
+
+            </div>
+        </div>
+
+        <div class="number__quest__mobile" id="numberQuest2">
+
+        </div>
+
+        <div class="quest_block" id="questBlock">
+            <div class="quest__block">
+                <div class="quest_1">
+                    <p>
+                        С помощью какого инструмента задаются стили на сайте?
+                    </p>
+                </div>
+
+                <div class="choice__option">
+
+                    <div class="choice__left">
+                        <div class="1__choice choice">
+                            <input type="radio" class="radio__input" name="test" id="html">
+                            <label for="html" class="radio__label">HTML</label>
+                        </div>
+                        <div class="2__choice choice">
+                            <input type="radio" class="radio__input" name="test" id="css">
+                            <label for="css" class="radio__label">CSS</label>
+                        </div>
+                    </div>
+                    <div class="choice__right">
+                        <div class="3__choice choice">
+                            <input type="radio" class="radio__input" name="test" id="js">
+                            <label for="js" class="radio__label">JS</label>
+                        </div>
+                        <div class="4__choice choice">
+                            <input type="radio" class="radio__input" name="test" id="vue">
+                            <label for="vue" class="radio__label">Vue</label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+            <div class="btn__quset">
+                <div class="btn__next">
+                    <button>
+                        Назад
+                    </button>
+                </div>
+                <div class="btn__answer">
+                    <button id="answer">
+                        Ответить
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/questNumber.js"></script>
+</body>
+
+</html>
