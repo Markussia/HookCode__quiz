@@ -160,6 +160,7 @@ body {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+    display: block;
 }
 
 label {
@@ -266,6 +267,23 @@ label {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+    display: block;
+}
+
+.result {
+    display: none;
+    z-index: 10003;
+    margin: 0 auto;
+    margin-top: 15px;
+    background-color: #677FFF;
+    padding: 7px 15px;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 220px;
 }
 
 @media (max-width: 500px) {
