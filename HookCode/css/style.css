@@ -10,6 +10,10 @@ body {
     background-color: #fff;
 }
 
+a {
+    text-decoration: none;
+}
+
 .header {
     padding: 8px 0;
     background-color: #D2D9FE;
@@ -22,16 +26,11 @@ body {
     display: flex;
 }
 
-.header .logo p {
-    align-self: center;
-    font-weight: 700;
-    margin: 0 5px;
-}
-
 .header img {
     width: 40px;
     height: 40px;
     align-self: center;
+    display: flex;
 }
 
 .header .number__quest {
@@ -180,7 +179,8 @@ label {
 }
 
 .categori_quiz {
-    background-color: rgb(123, 142, 247);
+    background-color: #DCE2FF;
+    border: 1px solid #6980FF;
     padding: 5px;
     position: absolute;
     top: 50%;
@@ -201,16 +201,16 @@ label {
     width: 80%;
 }
 
-.categori__block a {
-    background-color: #fff;
+.categori__block p {
     padding: 5px;
     display: block;
     text-align: center;
     text-decoration: none;
-    color: #677FFF;
     font-weight: 700;
     border-radius: 5px;
     margin: 15px auto;
+    color: #ffffff;
+    background-color: #677FFF;
 }
 
 .choice__option__text {
@@ -255,6 +255,7 @@ label {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin: 5px;
 }
 
 .out__quiz__info button {
@@ -284,6 +285,64 @@ label {
     border-radius: 5px;
     cursor: pointer;
     width: 220px;
+}
+
+.categori_quiz h5 {
+    color: #677FFF;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 20px 25px;
+}
+
+.web_quiz a {
+    color: #677FFF;
+    background-color: #fff;
+    width: 120px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    display: none;
+}
+
+.link__footer {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.link__footer a {
+    color: #677FFF;
+    font-weight: 700;
+    margin: 0 15px;
+}
+
+.left__link {
+    display: flex;
+    flex-direction: column;
+}
+
+.right__link a {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+}
+
+.left__link a:nth-child(2) {
+    margin-top: 5px;
+}
+
+.python_quiz a {
+    color: #677FFF;
+    background-color: #fff;
+    width: 120px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    display: none;
 }
 
 @media (max-width: 500px) {

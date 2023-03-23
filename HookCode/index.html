@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная HookCode</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -19,16 +20,21 @@
 
         <div class="section">
             <div class="categori_quiz">
+                <h5>Опросы</h5>
                 <div class="categori__block">
                     <div class="web_quiz">
-                        <a href="web-quiz.html">
+                        <p id="popenWeb">
                             Frontend-Скит опрос
-                        </a>
+                            <a id="aclickWeb" href="web-quiz.html">Начать</a>
+                        </p>
+
                     </div>
                     <div class="python_quiz">
-                        <a href="py-quiz.html">
+                        <p id="popenPy">
                             Python-Скит опрос
-                        </a>
+                            <a id="aclickPy" href="py-quiz.html">Начать</a>
+                        </p>
+
                     </div>
                 </div>
             </div>
@@ -36,11 +42,20 @@
 
         <div class="footer">
             Copyright &copy; HookCode
+            <div class="link__footer">
+                <div class="left__link">
+                    <a href="py-quiz.html">Python-Скит опрос</a>
+                    <a href="web-quiz.html">Frontend-Скит опрос</a>
+                </div>
+                <div class="right__link">
+                    <a href="https://github.com/Markussia">GitHub</a>
+                </div>
+            </div>
         </div>
 
     </div>
 
-    <script src="">
+    <script src="js/index.js">
     </script>
 </body>
 

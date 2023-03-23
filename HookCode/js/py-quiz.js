@@ -23,9 +23,6 @@ let choiceRadio = document.querySelector('.choice__option__radio');
 let choiceText = document.querySelector('.choice__option__text');
 let inpQuiz = document.querySelector('#inpQuiz');
 let result1 = document.querySelector('#result');
-let popen = document.querySelector('.categori__block a')
-let aclick = document.querySelector('.categori__block p')
-
 
 let balls = 0
 let ballsFake = 0
@@ -38,6 +35,60 @@ const timeLimit = 420;
 let timePassed = 0;
 let timeLeft = timeLimit;
 let timerInterval = null;
+
+numberQuest.innerHTML = "Вопрос: " +
+    number + " / 5";
+
+test0();
+
+function test0() {
+    if (number == 1) {
+        choiceRadio.style.display = ''
+        choiceText.style.display = 'none'
+    }
+}
+
+
+function test1() {
+    if (html__radio.checked === true) {
+        balls += 1
+        ballsFake += 3
+        console.log('selected')
+        localStorage.setItem('test', balls);
+    } else {}
+}
+
+function test2() {
+    if (css.checked === true) {
+        balls += 1
+        console.log('selected')
+        ballsFake += 4
+    } else {}
+}
+
+function test3() {
+    if (inpQuiz.value == 'import') {
+        balls += 1
+        ballsFake += 3
+    } else {}
+}
+
+function test4() {
+    if (inpQuiz.value == 'Нет') {
+        balls += 1
+        ballsFake += 3
+    } else if (inpQuiz.value == 'нет') {
+        balls += 1
+        ballsFake += 3
+    } else {}
+}
+
+function test5() {
+    if (inpQuiz.value == 'Dart') {
+        balls += 1
+        ballsFake += 3
+    } else {}
+}
 
 
 
@@ -95,69 +146,6 @@ function formatTime(time) {
 }
 
 
-numberQuest.innerHTML = "Вопрос: " +
-    number + " / 5"
-
-test0();
-
-function test0() {
-    if (number == 1) {
-        choiceRadio.style.display = ''
-        choiceText.style.display = 'none'
-    }
-}
-
-
-function test1() {
-    if (css__radio.checked === true) {
-        balls += 1
-        ballsFake += 3
-        localStorage.setItem('test', balls);
-    } else {}
-}
-
-function test2() {
-    if (js__radio.checked === true) {
-        balls += 1
-        ballsFake += 4
-    } else {}
-}
-
-function test3() {
-    if (inpQuiz.value == 'npm') {
-        balls += 1
-        ballsFake += 3
-    } else if (inpQuiz.value == 'NPM') {
-        balls += 1
-        ballsFake += 3
-    } else if (inpQuiz.value == 'Npm') {
-        balls += 1
-        ballsFake += 3
-    } else {}
-}
-
-function test4() {
-    if (inpQuiz.value == 'scss') {
-        balls += 1
-        ballsFake += 2
-    } else if (inpQuiz.value == 'SCSS') {
-        balls += 1
-        ballsFake += 2
-    } else {}
-}
-
-function test5() {
-    if (inpQuiz.value == 'Нет') {
-        balls += 1
-        ballsFake += 3
-    } else if (inpQuiz.value == 'нет') {
-        balls += 1
-        ballsFake += 3
-    } else {}
-}
-
-
-
 answer__btn.addEventListener("click", function() {
     number = number + 1
     numberQuest.innerHTML = "Вопрос: " +
@@ -168,11 +156,11 @@ answer__btn.addEventListener("click", function() {
 
     if (number == 2) {
         test1();
-        questP.innerHTML = 'С помощью какого фрейворка можно писать backend и frontend? '
-        labelHtml.innerHTML = 'JS'
-        labelCss.innerHTML = 'React'
-        labelJs.innerHTML = 'Next.js'
-        labelVue.innerHTML = 'tmi.js'
+        questP.innerHTML = 'Блягодаря какой библиотеке возможно создать Telegram боты на Python?'
+        labelHtml.innerHTML = 'SQLite'
+        labelCss.innerHTML = 'aiogram'
+        labelJs.innerHTML = 'Kivy'
+        labelVue.innerHTML = 'Flask'
         choiceRadio.style.display = ''
         html__radio.checked = false
         css__radio.checked = false
@@ -183,17 +171,16 @@ answer__btn.addEventListener("click", function() {
         test2();
         choiceRadio.style.display = 'none'
         choiceText.style.display = ''
-        questP.innerHTML = 'С помощью чего можно установить Vue?<br>.... install vue'
-
+        questP.innerHTML = 'С помощью чего мы в начале кода Python импортируем в проекте библиотеку??<br>.... tkinter'
     }
     if (number == 4) {
         test3();
-        questP.innerHTML = 'Как называется популярный препроцессор для CSS?<br>S...'
+        questP.innerHTML = 'Можно ли в Python писать сайты без библиотеки??<br>Да/Нет'
         inpQuiz.value = ''
     }
     if (number == 5) {
         test4();
-        questP.innerHTML = 'HTML - это язык програмиирования?<br>Да/Нет'
+        questP.innerHTML = 'Какой язык создал Google для того чтоб писать красивые интерфейсы на Python??<br>'
         inpQuiz.value = ''
     }
     if (number == 6) {
@@ -224,8 +211,6 @@ answer__btn.addEventListener("click", function() {
 })
 
 
-
-
 btnLocationURL.addEventListener('click', function() {
     btnLocationURL.style.display = 'none'
     result1.style.display = 'block'
@@ -240,8 +225,3 @@ btnLocationURL2.addEventListener('click', function() {
     result1.innerHTML = "У вас баллов: " +
         ballsFake + "<br>Ваша оценка: " + balls
 })
-
-popen.addEventListener('click', function() {
-    aclick.style.display = 'block'
-})
-console.log("h")
